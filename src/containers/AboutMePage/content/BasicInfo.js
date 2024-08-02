@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 
 import * as Styled from '../styles';
 
-// I *could* just update the text every year, but screw that
+// I *could* just update the text every year, but where's the fun in that?
 const myAge = () => Math.floor(DateTime.now().diff(DateTime.local(1999, 9, 30), 'years').years).toString();
 
 const BasicInfo = () => (

@@ -7,7 +7,6 @@ import MemesFolder from './MemesFolder';
 
 import * as Styled from './styles';
 
-const rosiePostId = "CgXyZoaujMV";
 const myPostId = "CgZSrvxOaC0";
 
 function MemesPage() {
@@ -32,13 +31,13 @@ function MemesPage() {
       <Flex flex={1} flexDirection="row" flexWrap="wrap">
         <Styled.FolderWrapper>
           <MemesFolder
-            memeIds={[rosiePostId, myPostId]}
+            memeIds={[myPostId, myPostId]}
             counter={counter}
           />
         </Styled.FolderWrapper>
         <Styled.FolderWrapper>
           <MemesFolder
-            memeIds={['CgV9BN4sZ8I', 'CQqI6M4lLG5', 'CBqDGHqlg8c']}
+            memeIds={[myPostId]}
             counter={counter}
           />
         </Styled.FolderWrapper>
