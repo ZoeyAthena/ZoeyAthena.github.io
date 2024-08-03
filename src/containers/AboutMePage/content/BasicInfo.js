@@ -13,7 +13,7 @@ const BasicInfo = () => (
     My pronouns are she/her; respect them or perish.</p>
     <p>I'm currently looking for work as a software developer. 
     If you want to hire me,
-    you can contact me at matthewphillips93669@gmail.com</p>
+    you can contact me at zoeyathena99@gmail.com</p>
   </Styled.Textbox>
 );
 
