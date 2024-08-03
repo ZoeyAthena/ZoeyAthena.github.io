@@ -1,12 +1,14 @@
 import React from 'react';
 
 import FloatIn from '../../components/FloatIn';
+import StandardHeader from '../../components/StandardHeader';
 import { BasicInfo, Degree, WorkExperience } from './content';
 
 import * as Styled from './styles';
 
 const AboutMePage = () => (
   <React.Fragment>
+    <StandardHeader />
     <Styled.ContentList>
       <Styled.ImageWrapper>
         <FloatIn delay="500ms">

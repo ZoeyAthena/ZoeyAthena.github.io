@@ -2,10 +2,13 @@ import React from 'react';
 
 import Maze from '../Maze';
 import ConnectFour from '../ConnectFour';
+import StandardHeader from '../../components/StandardHeader';
+
 import * as Styled from './styles';
 
 const Games = () => (
-  <div>
+  <React.Fragment>
+    <StandardHeader />
     <div className="content-body">
       <p>Here are some games I've made. More will be added approximately once every whenever I feel like it.</p>
     </div>
@@ -20,7 +23,7 @@ const Games = () => (
     <Styled.GameWrapper>
       <ConnectFour />
     </Styled.GameWrapper>
-  </div>
+  </React.Fragment>
 );
 
 export default Games;

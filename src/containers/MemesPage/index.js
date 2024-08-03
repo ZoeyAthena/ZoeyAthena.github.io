@@ -1,7 +1,9 @@
 import React from 'react';
 import { Flex } from 'rebass';
 
+import StandardHeader from '../../components/StandardHeader';
 import MlgFrog from '../../components/MlgFrog';
+import Sanik from '../../components/Sanik';
 import useCounter from '../../hooks/useCounter';
 import MemesFolder from './MemesFolder';
 
@@ -13,7 +15,8 @@ function MemesPage() {
   const counter = useCounter();
 
   return (
-    <div>
+    <React.Fragment>
+      <StandardHeader title="Zoey's Website of Dank Memes" />
       <div className="content-body">
         <p>You can drag these memes (and their folders) around!</p>
         <p>To click on a post instead of dragging it, please double-click instead.</p>
@@ -43,7 +46,8 @@ function MemesPage() {
         </Styled.FolderWrapper>
       </Flex>
       <Styled.Spacer height="69px" />
-    </div>
+      <Sanik />
+    </React.Fragment>
   );
 }
 
