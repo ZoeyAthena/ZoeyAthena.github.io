@@ -49,3 +49,7 @@ export const ConfigSlider = styled.div`
   width: 100px;
   margin: 10px;
 `;
+
+export const ResetButton = styled.button`
+  margin-right: 20px;
+`;
