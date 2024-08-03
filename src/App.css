@@ -1,10 +1,23 @@
 .App {
   text-align: center;
   min-height: 100vh;
+  /* Vertical trans flag */
+  background: repeating-linear-gradient(
+    to right,
+    #d0d0ff,
+    #d0d0ff 20vw,
+    #ffd0d0 20vw,
+    #ffd0d0 40vw,
+    #ffffff 40vw,
+    #ffffff 60vw,
+    #ffd0d0 60vw,
+    #ffd0d0 80vw,
+    #d0d0ff 80vw,
+    #d0d0ff 100vw
+  );
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -12,6 +25,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* Vertical trans flag */
+  background: repeating-linear-gradient(
+    to right,
+    #d0d0ff,
+    #d0d0ff 20vw,
+    #ffd0d0 20vw,
+    #ffd0d0 40vw,
+    #ffffff 40vw,
+    #ffffff 60vw,
+    #ffd0d0 60vw,
+    #ffd0d0 80vw,
+    #d0d0ff 80vw,
+    #d0d0ff 100vw
+  );
 }
 
 h1.page-title {

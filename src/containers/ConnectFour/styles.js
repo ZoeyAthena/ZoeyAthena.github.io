@@ -17,3 +17,13 @@ export const CFColumn = styled.div`
   height: 30vw;
   overflow: hidden;
 `;
+
+export const CFWrapper = styled.div`
+  box-sizing: border-box;
+  width: 80vw;
+  margin: 0 10vw;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+`;

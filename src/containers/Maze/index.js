@@ -48,10 +48,10 @@ const MazeWrapper = () => {
   }, [restarting, mazeHook]);
 
   return (
-    <div onKeyPress={mazeHook.keyHandler}>
+    <div onKeyDown={mazeHook.keyHandler}>
       <div className="content-body">
         <Styled.MazeConfig>
-          <button onClick={mazeHook.reset}>Restart</button>
+          <Styled.ResetButton onClick={mazeHook.reset}>Restart</Styled.ResetButton>
           <p>Maze Settings:</p>
           <Styled.ConfigSlider>
             <Input value={nextWidth} handler={mazeHook.setWidth} name="Maze Width" />
