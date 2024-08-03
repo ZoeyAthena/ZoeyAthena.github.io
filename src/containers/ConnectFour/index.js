@@ -20,7 +20,7 @@ const ConnectFour = () => {
   } = useCF();
 
   return (
-    <div className="crap">
+    <Styled.CFWrapper>
       <Styled.CFGrid key={resetDammit}>
         {grid.map((col, i) => (
           <Styled.CFColumn key={i} onClick={() => doATurn(i)}>
@@ -31,7 +31,7 @@ const ConnectFour = () => {
       <div className="content-body-right">
         <p>Connect Four: Be the first to make a line of four chips.</p>
         <p>Select a column to drop a chip there.</p>
-        <p>Difficulty options coming soon.</p>
+        <p>Opponent is currently random. Difficulty options coming soon.</p>
         <button onClick={resetGrid}>Reset</button>
         <Flex justifyContent="center" alignItems="center">
           <Switch value={twoPlayerGame} onClick={switchTwoPlayers} />
@@ -40,7 +40,7 @@ const ConnectFour = () => {
         
         <p>{getStatus()}</p>
       </div>
-    </div>
+    </Styled.CFWrapper>
   );
 };
 
