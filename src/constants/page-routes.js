@@ -3,4 +3,5 @@ export default {
   ABOUT_ME: '/about-me/',
   GAMES: '/games/',
   MEMES: '/dank-memes/',
+  SHARKS: '/sharkies/',
 };
