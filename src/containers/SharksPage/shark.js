@@ -6,7 +6,7 @@ import useBooleanState from '../../hooks/useBooleanState';
 
 import * as Styled from './styles';
 
-const Shark = ({ animationParams, sharkImg, textBoxParams }) => {
+const Shark = ({ animationParams, sharkImg, facts, textBoxParams }) => {
   const sharkRef = useRef(null);
   const sharkMovingState = useBooleanState(true);
 
@@ -28,21 +28,23 @@ const Shark = ({ animationParams, sharkImg, textBoxParams }) => {
   }, [sharkMovingState.state]);
 
   return (
-    <Styled.SharkXLinear
-      {...animationParams}
-      ref={sharkRef}
-      >
+    <Styled.SharkXLinear {...animationParams} ref={sharkRef}>
       <Styled.SharkYLinear {...animationParams}>
         <Styled.SharkOscillator {...animationParams}>
           <Styled.SharkRotator {...animationParams}>
-            <Styled.SharkImage src={sharkImg} alt="shark image" onClick={sharkMovingState.toggle} />
+            <Styled.SharkImage
+              {...animationParams}
+              src={sharkImg}
+              alt="shark image"
+              onClick={sharkMovingState.toggle}
+            />
             {sharkMovingState.state ? null : (
-              <Styled.TextBoxWrapper>
+              <Styled.TextBoxWrapper {...textBoxParams}>
                 <Styled.TextBox {...textBoxParams} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
                   <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="lightblue" stroke="blue" />
                 </Styled.TextBox>
-                <Styled.Text>
-                Sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text
+                <Styled.Text {...textBoxParams}>
+                  {facts}
                 </Styled.Text>
               </Styled.TextBoxWrapper>
             )}
@@ -62,14 +64,17 @@ Shark.propTypes = {
     oscPeriod: PropTypes.number,
     widthVW: PropTypes.number,
     isReversed: PropTypes.bool,
+    maxAngle: PropTypes.number,
+    minAngle: PropTypes.number,
+    medAngle: PropTypes.number,
   }),
   sharkImg: PropTypes.string,
+  facts: PropTypes.string,
   textBoxParams: PropTypes.shape({
-    width: PropTypes.number,
-    height: PropTypes.number,
+    boxWidth: PropTypes.number,
+    boxHeight: PropTypes.number,
     xOffset: PropTypes.number,
     yOffset: PropTypes.number,
-    text: PropTypes.string,
   }),
 };
 
