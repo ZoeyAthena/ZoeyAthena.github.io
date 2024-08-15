@@ -11,17 +11,17 @@ const Shark = ({ animationParams, sharkImg, textBoxParams }) => {
   const sharkMovingState = useBooleanState(true);
 
   useEffect(() => {
-    if (!!R.path(['current', 'firstChild', 'firstChild'], sharkRef)) {
-      console.log({ sharkMovingState, style: sharkRef.current.style.animationPlayState });
+    if (!!R.path(['current', 'firstChild', 'firstChild', 'firstChild'], sharkRef)) {
       const nextAnimState = sharkMovingState.state ? 'running' : 'paused';
-      // Pause/resume all three levels of shark.
-      // If I don't delay it to the next frame,
+      // Pause/resume all four levels of shark animation.
+      // If I don't delay this to the next frame,
       // the shark vanishes the first time you click it.
       window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
           sharkRef.current.style.animationPlayState = nextAnimState;
           sharkRef.current.firstChild.style.animationPlayState = nextAnimState;
           sharkRef.current.firstChild.firstChild.style.animationPlayState = nextAnimState;
+          sharkRef.current.firstChild.firstChild.firstChild.style.animationPlayState = nextAnimState;
         });
       });
     }
@@ -34,17 +34,19 @@ const Shark = ({ animationParams, sharkImg, textBoxParams }) => {
       >
       <Styled.SharkYLinear {...animationParams}>
         <Styled.SharkOscillator {...animationParams}>
-          <Styled.SharkImage src={sharkImg} alt="shark image" onClick={sharkMovingState.toggle} />
-          {sharkMovingState.state ? null : (
-            <Styled.TextBoxWrapper>
-              <Styled.TextBox viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="lightblue" stroke="blue" />
-              </Styled.TextBox>
-              <Styled.Text>
-              Have you ever heard of the tragedy of Darth Plagueis the Wise? I thought not. It's a Sith legend. Not a story the Jedi would tell you.
-              </Styled.Text>
-            </Styled.TextBoxWrapper>
-          )}
+          <Styled.SharkRotator {...animationParams}>
+            <Styled.SharkImage src={sharkImg} alt="shark image" onClick={sharkMovingState.toggle} />
+            {sharkMovingState.state ? null : (
+              <Styled.TextBoxWrapper>
+                <Styled.TextBox {...textBoxParams} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="lightblue" stroke="blue" />
+                </Styled.TextBox>
+                <Styled.Text>
+                Sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text
+                </Styled.Text>
+              </Styled.TextBoxWrapper>
+            )}
+          </Styled.SharkRotator>
         </Styled.SharkOscillator>
       </Styled.SharkYLinear>
     </Styled.SharkXLinear>
