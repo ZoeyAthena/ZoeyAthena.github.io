@@ -7,6 +7,7 @@ import Homepage from './containers/Homepage';
 import AboutMePage from './containers/AboutMePage';
 import Games from './containers/GamesPage';
 import MemesPage from './containers/MemesPage';
+import SharksPage from './containers/SharksPage';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ const Routes = () => (
     <Route path={pageRoutes.ABOUT_ME} component={AboutMePage} />
     <Route path={pageRoutes.GAMES} component={Games} />
     <Route path={pageRoutes.MEMES} component={MemesPage} />
+    <Route path={pageRoutes.SHARKS} component={SharksPage} />
   </div>
 );
 

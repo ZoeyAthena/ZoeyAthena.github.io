@@ -20,6 +20,9 @@ const NavBar = () => (
       <Link to={pageRoutes.MEMES}>
         <Styled.NavButton>Memes</Styled.NavButton>
       </Link>
+      <Link to={pageRoutes.SHARKS}>
+        <Styled.NavButton>Shark Facts</Styled.NavButton>
+      </Link>
     </Styled.NavBar>
   </Styled.NavBarWrapper>
 );
