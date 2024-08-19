@@ -12,6 +12,8 @@ const SharksPage = () => {
       <StandardHeader title="Here be sharkies!" />
       <Shark {...sharkParams.mako} />
       <Shark {...sharkParams.hammerhead} />
+      <Shark {...sharkParams.bull} />
+      <Shark {...sharkParams.whale} />
     </Styled.OceanBackground>
   )
 };

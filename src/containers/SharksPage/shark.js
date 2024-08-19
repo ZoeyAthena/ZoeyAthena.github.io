@@ -11,6 +11,7 @@ const Shark = ({ animationParams, sharkImg, facts, textBoxParams }) => {
   const sharkMovingState = useBooleanState(true);
 
   useEffect(() => {
+    // Check that all four shark-animating divs exist
     if (!!R.path(['current', 'firstChild', 'firstChild', 'firstChild'], sharkRef)) {
       const nextAnimState = sharkMovingState.state ? 'running' : 'paused';
       // Pause/resume all four levels of shark animation.
@@ -57,13 +58,22 @@ const Shark = ({ animationParams, sharkImg, facts, textBoxParams }) => {
 
 Shark.propTypes = {
   animationParams: PropTypes.shape({
+    // Controls overall vertical movement
     yOffset: PropTypes.number,
     vertDistance: PropTypes.number,
+    // Size of swimmies
     amplitude: PropTypes.number,
-    motionPeriod: PropTypes.number,
+    // Number of swimmies per screen
+    animCycles: PropTypes.number,
+    // Number of swimmies between screens
+    delayCycles: PropTypes.number,
+    // Duration of each swimmy
     oscPeriod: PropTypes.number,
+    // Size of shark, in vw
     widthVW: PropTypes.number,
+    // Whether shark goes right to left
     isReversed: PropTypes.bool,
+    // How much to tilt shark during swimmies. med->max->med->min->med
     maxAngle: PropTypes.number,
     minAngle: PropTypes.number,
     medAngle: PropTypes.number,
