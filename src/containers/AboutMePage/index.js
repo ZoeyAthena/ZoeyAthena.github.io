@@ -17,8 +17,8 @@ const AboutMePage = () => (
       </Styled.ImageWrapper>
       <Styled.ImageWrapper>
         <FloatIn delay="1000ms">
-          {/* Selfie, pink+blue hair, suit jacket */}
-          <Styled.AMPImage src="https://i.imgur.com/qPmFV1Q.jpg" />
+          {/* Selfie, light makeup, black+flowery dress */}
+          <Styled.AMPImage src="https://i.imgur.com/TJx4Krg.jpeg" />
         </FloatIn>
       </Styled.ImageWrapper>
       <Styled.ImageWrapper>
@@ -33,8 +33,8 @@ const AboutMePage = () => (
       </Styled.ImageWrapper>
       <Styled.ImageWrapper>
         <FloatIn delay="1250ms">
-          {/* Selfie, light pink hair, with mask */}
-          <Styled.AMPImage src="https://i.imgur.com/rfSAZnb.jpg" />
+          {/* Selfie, pink+blue hair, suit jacket */}
+          <Styled.AMPImage src="https://i.imgur.com/qPmFV1Q.jpg" />
         </FloatIn>
       </Styled.ImageWrapper>
     </Styled.ContentList>
