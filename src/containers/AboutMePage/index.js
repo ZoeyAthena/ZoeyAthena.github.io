@@ -2,7 +2,7 @@ import React from 'react';
 
 import FloatIn from '../../components/FloatIn';
 import StandardHeader from '../../components/StandardHeader';
-import { BasicInfo, Degree, WorkExperience } from './content';
+import { BasicInfo, Degree, WorkExperience, OtherInfo } from './content';
 
 import * as Styled from './styles';
 
@@ -33,6 +33,11 @@ const AboutMePage = () => (
       </Styled.ImageWrapper>
       <Styled.ImageWrapper>
         <FloatIn delay="1250ms">
+          <OtherInfo />
+        </FloatIn>
+      </Styled.ImageWrapper>
+      <Styled.ImageWrapper>
+        <FloatIn delay="1750ms">
           {/* Selfie, pink+blue hair, suit jacket */}
           <Styled.AMPImage src="https://i.imgur.com/qPmFV1Q.jpg" />
         </FloatIn>
