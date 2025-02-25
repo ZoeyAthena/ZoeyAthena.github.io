@@ -21,7 +21,7 @@ function MemesPage() {
         <p>You can drag these memes (and their folders) around!</p>
         <p>To click on a post instead of dragging it, please double-click instead.</p>
         <p>Click on the left bar of a folder to put all of the memes back inside it.</p>
-        <p>More memes coming soon! Also some UI improvements, eventually...</p>
+        <p>This is just a proof-of-concept for now; more memes coming eventually! Also some UI improvements, eventually...</p>
         <a
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           target="_blank"
