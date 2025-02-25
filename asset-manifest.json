@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.05e34ec2.chunk.css",
-    "main.js": "/static/js/main.9f8364c3.chunk.js",
-    "main.js.map": "/static/js/main.9f8364c3.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.e9af8585.chunk.js": "/static/js/2.e9af8585.chunk.js",
-    "static/js/2.e9af8585.chunk.js.map": "/static/js/2.e9af8585.chunk.js.map",
+    "main.css": "/static/css/main.10e5f5d6.css",
+    "main.js": "/static/js/main.e0070336.js",
+    "static/media/mlgFrog.gif": "/static/media/mlgFrog.4dd79fe06f77fd62858f.gif",
+    "static/media/sanik.png": "/static/media/sanik.0a9bc36ff256aaee72e0.png",
     "index.html": "/index.html",
-    "precache-manifest.d156331a78e05862d363f7947cd393b0.js": "/precache-manifest.d156331a78e05862d363f7947cd393b0.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.05e34ec2.chunk.css.map": "/static/css/main.05e34ec2.chunk.css.map",
-    "static/media/mlgFrog.gif": "/static/media/mlgFrog.416aecb3.gif",
-    "static/media/sanik.png": "/static/media/sanik.e071ee00.png"
-  }
+    "main.10e5f5d6.css.map": "/static/css/main.10e5f5d6.css.map",
+    "main.e0070336.js.map": "/static/js/main.e0070336.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10e5f5d6.css",
+    "static/js/main.e0070336.js"
+  ]
 }
