@@ -2,21 +2,19 @@
   "name": "ZoeyAthena.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ZoeyAthena.github.io",
+  "homepage": "https://zoeyathena.github.io",
   "dependencies": {
     "@material-ui/core": "^4.0.0",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.60",
     "luxon": "^2.4.0",
-    "material-ui": "^0.20.2",
     "ramda": "^0.27.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^5.0.1",
     "rebass": "^4.0.7",
-    "serve": "^11.3.2",
-    "styled-components": "^4.2.0"
+    "serve": "^14.2.4",
+    "styled-components": "^4.2.0",
+    "webpack": "^5.98.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -47,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.3.0"
   }
 }
