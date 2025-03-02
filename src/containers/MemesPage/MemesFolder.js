@@ -3,7 +3,7 @@ import * as R from 'ramda';
 
 import useCounter from '../../hooks/useCounter';
 import useDragFolder from './useDragFolder';
-import InstaPost from './InstaPost';
+import InstaPost from '../../components/InstaPost';
 import DraggyBoi from './DraggyBoi';
 
 import * as Styled from './styles';

@@ -1,6 +1,6 @@
 // This is the script that was supposed to be called by the instagram embed code,
 // to fetch the post. However this script was not working(referenced an undefined variable)
-export const fixedScript = () => {
+const fixedScript = () => {
   /* eslint-disable */
   (function(){
     var global=this;
@@ -58,3 +58,5 @@ export const fixedScript = () => {
   }).call({});
   /* eslint-enable */
 };
+
+export default fixedScript;
