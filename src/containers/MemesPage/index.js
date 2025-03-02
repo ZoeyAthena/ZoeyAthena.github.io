@@ -10,6 +10,7 @@ import MemesFolder from './MemesFolder';
 import * as Styled from './styles';
 
 const myPostId = "CgZSrvxOaC0";
+const myOtherPostId = 'DEq3A8wxg_P';
 
 function MemesPage() {
   const counter = useCounter();
@@ -40,7 +41,7 @@ function MemesPage() {
         </Styled.FolderWrapper>
         <Styled.FolderWrapper>
           <MemesFolder
-            memeIds={[myPostId]}
+            memeIds={[myOtherPostId, myOtherPostId]}
             counter={counter}
           />
         </Styled.FolderWrapper>
