@@ -1,6 +1,7 @@
 import React from 'react';
 
 import StandardHeader from '../../components/StandardHeader';
+import WhosAGoodPup from '../../components/WhosAGoodPup';
 
 import './index.css';
 
@@ -23,6 +24,7 @@ function Homepage() {
         >
           My GitHub page
         </a>
+        <WhosAGoodPup />
       </div>
     </React.Fragment>
   );
