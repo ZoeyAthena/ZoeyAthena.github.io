@@ -31,6 +31,7 @@ const BabieGiftPage = () => {
           key={text}
         />
       )}
+      <Turtle {...turtleParams.secretCinnamoroll()} key="easteregg" />
     </Styled.OceanBackground>
   )
 };

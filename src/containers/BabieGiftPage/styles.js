@@ -39,7 +39,7 @@ export const TurtleXLinear = styled.div`
   height: 100%;
   left: ${({ widthVW, isReversed }) => isReversed ? 105 : (-5 - widthVW)}vw;
   top: ${R.prop('yOffset')}vh;
-  animation: ${sliiideToTheRight} ${calcAnimDuration}s infinite linear;
+  animation: ${sliiideToTheRight} ${calcAnimDuration}s ${({ onlyOnce }) => (onlyOnce ? 1 : 'infinite')} linear;
 `;
 
 const sliiideToTheDown = props => keyframes`

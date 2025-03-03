@@ -1,104 +1,34 @@
 import turtles from '../../assets/turtles';
+import cinnamoroll from '../../assets/cinnamoroll.png';
 
-const randInt = upTo => Math.floor(Math.random() * upTo);
-const randIntRange = (min, max) => (randInt(max - min) + min);
+const randInt = upTo => Math.floor(Math.random() * upTo); // [0, upTo)
+const randIntRange = (min, max) => (randInt(max - min) + min); // [min, max)
 const randBool = () => !!randInt(2);
 
-export const turtle1 = {
+export const secretCinnamoroll = () => ({
   animationParams: {
-    yOffset: -40,
-    vertDistance: 30,
-    amplitude: 20,
-    animCycles: 2,
-    delayCycles: 0,
-    oscPeriod: 2,
-    widthVW: 13,
-    isReversed: false,
-    maxAngle: 60,
-    minAngle: -20,
-    medAngle: 20,
-  },
-  turtleImg: turtles.right1,
-  facts: 'turtle1_placeholder',
-  textBoxParams: {
-    boxWidth: 20,
-    boxHeight: 15,
-    xOffset: 8,
-    yOffset: -12,
-  },
-};
-
-export const turtle2 = {
-  animationParams: {
-    yOffset: 20,
-    vertDistance: -50,
-    amplitude: 10,
-    animCycles: 4,
-    delayCycles: 1,
-    oscPeriod: 1.5,
-    widthVW: 30,
-    isReversed: false,
-    maxAngle: -15,
-    minAngle: -35,
-    medAngle: -25,
-  },
-  turtleImg: turtles.right1,
-  facts: 'turtle2_placeholder',
-  textBoxParams: {
-    boxWidth: 20,
-    boxHeight: 15,
-    xOffset: 8,
-    yOffset: -12,
-  },
-};
-
-export const turtle3 = {
-  animationParams: {
-    yOffset: 30,
-    vertDistance: -80,
-    amplitude: 30,
-    animCycles: 5,
-    delayCycles: 3,
-    oscPeriod: 1.4,
-    widthVW: 25,
-    isReversed: true,
-    maxAngle: -5,
-    minAngle: 65,
-    medAngle: 30,
-  },
-  turtleImg: turtles.left1,
-  facts: 'turtle3_placeholder',
-  textBoxParams: {
-    boxWidth: 20,
-    boxHeight: 15,
-    xOffset: 8,
-    yOffset: -12,
-  },
-};
-
-export const turtle4 = {
-  animationParams: {
-    yOffset: 0,
-    vertDistance: 60,
-    amplitude: 10,
+    widthVW: 10,
+    yOffset: 120,
+    vertDistance: 0,
+    amplitude: 0,
+    isReversed: randBool(),
+    minAngle: 0,
+    medAngle: 0,
+    maxAngle: 0,
     animCycles: 1,
-    delayCycles: 4,
-    oscPeriod: 4,
-    widthVW: 45,
-    isReversed: true,
-    maxAngle: -20,
-    minAngle: 10,
-    medAngle: -5,
+    delayCycles: randIntRange(2, 16),
+    oscPeriod: 3,
+    onlyOnce: true,
   },
-  turtleImg: turtles.left1,
-  facts: 'turtle4_placeholder',
+  turtleImg: cinnamoroll,
+  text: 'You found the secret cinnamoroll!! Tell Zoey and get clickies for being such a good pup!! :3',
   textBoxParams: {
-    boxWidth: 20,
-    boxHeight: 15,
-    xOffset: 8,
-    yOffset: -12,
-  },
-};
+    boxWidth: 15,
+    boxHeight: 12,
+    xOffset: 0,
+    yOffset: -11,
+  }
+});
 
 export const generateTurtleParams = (key, isPost) => {
   const widthVW = randIntRange(8, 15);
@@ -107,7 +37,7 @@ export const generateTurtleParams = (key, isPost) => {
   const vertDistance = randInt(maxY) - yOffset;
   const amplitude = randIntRange(5, 50);
   const isReversed = randBool();
-  const horizDistance = 2 * widthVW + 100;
+  const horizDistance = widthVW + 110;
   const animCycles = randIntRange(1, 6); // no more than 5 oscillations
   const angleMultiplier = (isReversed ? -1 : 1) * 180 / Math.PI;
   const medAngle = Math.atan2(vertDistance, horizDistance) * angleMultiplier;
