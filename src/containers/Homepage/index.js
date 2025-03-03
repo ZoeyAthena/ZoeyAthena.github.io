@@ -14,7 +14,6 @@ function Homepage() {
         <p>I made this website using React, to show off my coding skills to employers and to host personal projects.</p>
         <p>I wanted to have some fun with this site; I'm much more professional when I'm actually working for someone.</p>
         <p>Check out the games; I'm proud of how they turned out.</p>
-        <p>To my wonderful Lavender: I love you more than air. Your gift will be here before your birthday.</p>
         <p>More content (and maybe even some professionalism) coming soon. Please check again soon.</p>
         <a
           className="App-link"
