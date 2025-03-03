@@ -1,4 +1,4 @@
-import rightOutTurtle from '../../assets/turtles/right_out.png';
+import turtles from '../../assets/turtles';
 
 const randInt = upTo => Math.floor(Math.random() * upTo);
 const randIntRange = (min, max) => (randInt(max - min) + min);
@@ -18,7 +18,7 @@ export const turtle1 = {
     minAngle: -20,
     medAngle: 20,
   },
-  turtleImg: rightOutTurtle,
+  turtleImg: turtles.right1,
   facts: 'turtle1_placeholder',
   textBoxParams: {
     boxWidth: 20,
@@ -42,7 +42,7 @@ export const turtle2 = {
     minAngle: -35,
     medAngle: -25,
   },
-  turtleImg: rightOutTurtle,
+  turtleImg: turtles.right1,
   facts: 'turtle2_placeholder',
   textBoxParams: {
     boxWidth: 20,
@@ -66,7 +66,7 @@ export const turtle3 = {
     minAngle: 65,
     medAngle: 30,
   },
-  turtleImg: rightOutTurtle,
+  turtleImg: turtles.left1,
   facts: 'turtle3_placeholder',
   textBoxParams: {
     boxWidth: 20,
@@ -90,7 +90,7 @@ export const turtle4 = {
     minAngle: 10,
     medAngle: -5,
   },
-  turtleImg: rightOutTurtle,
+  turtleImg: turtles.left1,
   facts: 'turtle4_placeholder',
   textBoxParams: {
     boxWidth: 20,
@@ -120,6 +120,7 @@ export const generateTurtleParams = key => {
   const animDuration = Math.random() * 8 + 2;
   const oscPeriod = animDuration / animCycles;
   const delayCycles = randInt(5);
+  const turtleImg = turtles[(isReversed ? 'left' : 'right') + randIntRange(1, 4)];
 
   return {
     animationParams: {
@@ -135,7 +136,7 @@ export const generateTurtleParams = key => {
       oscPeriod,
       delayCycles,
     },
-    turtleImg: rightOutTurtle,
+    turtleImg,
     postId: key,
     textBoxParams: {
       boxWidth: 20,

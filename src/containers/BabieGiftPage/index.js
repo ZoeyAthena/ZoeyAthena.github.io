@@ -18,7 +18,11 @@ const BabieGiftPage = () => {
       </Styled.OceanHeader>
       <NavBar />
       {turtlePosts.map(([postId]) =>
-        <Turtle {...turtleParams.generateTurtleParams(postId)} key={postId} />
+        <Turtle
+          {...turtleParams.generateTurtleParams(postId)}
+          key={postId}
+          captioned={false}
+        />
       )}
     </Styled.OceanBackground>
   )
