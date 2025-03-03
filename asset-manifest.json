@@ -1,15 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.10e5f5d6.css",
-    "main.js": "/static/js/main.7e232db8.js",
+    "main.js": "/static/js/main.f5422b1a.js",
+    "static/media/right_1.png": "/static/media/right_1.bcae4a75b4bd8ba7f0d2.png",
+    "static/media/left_2.png": "/static/media/left_2.d5c48ea128bc55b63bf6.png",
+    "static/media/left_3.png": "/static/media/left_3.b6cda32b31255d0157ea.png",
+    "static/media/right_2.png": "/static/media/right_2.028d97312a5fe2defd47.png",
     "static/media/mlgFrog.gif": "/static/media/mlgFrog.4dd79fe06f77fd62858f.gif",
+    "static/media/underwater2.PNG": "/static/media/underwater2.d00547dffed98d565c8d.PNG",
+    "static/media/right_3.png": "/static/media/right_3.a2b5df35c7b7ef946026.png",
+    "static/media/cinnamoroll.png": "/static/media/cinnamoroll.8a0bde34a26551f59ae3.png",
+    "static/media/left_1.png": "/static/media/left_1.b242073e6490df1e1d7f.png",
     "static/media/sanik.png": "/static/media/sanik.0a9bc36ff256aaee72e0.png",
     "index.html": "/index.html",
     "main.10e5f5d6.css.map": "/static/css/main.10e5f5d6.css.map",
-    "main.7e232db8.js.map": "/static/js/main.7e232db8.js.map"
+    "main.f5422b1a.js.map": "/static/js/main.f5422b1a.js.map"
   },
   "entrypoints": [
     "static/css/main.10e5f5d6.css",
-    "static/js/main.7e232db8.js"
+    "static/js/main.f5422b1a.js"
   ]
 }
