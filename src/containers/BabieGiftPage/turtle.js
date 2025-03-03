@@ -7,7 +7,7 @@ import InstaPost from '../../components/InstaPost';
 
 import * as Styled from './styles';
 
-const Turtle = ({ animationParams, turtleImg, postId, textBoxParams }) => {
+const Turtle = ({ animationParams, turtleImg, postId, textBoxParams, isPost, text }) => {
   const turtleRef = useRef(null);
   const turtleMovingState = useBooleanState(true);
 
@@ -42,13 +42,17 @@ const Turtle = ({ animationParams, turtleImg, postId, textBoxParams }) => {
             />
             {turtleMovingState.state ? null : (
               <Styled.TextBoxWrapper {...textBoxParams}>
-                <InstaPost postId={postId} />
-                {/* <Styled.TextBox {...textBoxParams} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                  <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="plum" stroke="purple" />
-                </Styled.TextBox>
-                <Styled.Text {...textBoxParams}>
-                  {facts}
-                </Styled.Text> */}
+                {isPost
+                  ? <InstaPost postId={postId} captioned={false} />
+                  : <React.Fragment>
+                      <Styled.TextBox {...textBoxParams} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="plum" stroke="purple" />
+                      </Styled.TextBox>
+                      <Styled.Text {...textBoxParams}>
+                        {text}
+                      </Styled.Text>
+                    </React.Fragment>
+                }
               </Styled.TextBoxWrapper>
             )}
           </Styled.TurtleRotator>

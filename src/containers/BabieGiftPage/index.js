@@ -1,6 +1,7 @@
 import React from 'react';
 
 import sweetPosts from '../../constants/sweet-insta-posts';
+import sweetTexts from '../../constants/sweet-texts';
 import NavBar from '../../components/NavBar';
 import Turtle from './turtle';
 import * as turtleParams from './turtle-params';
@@ -21,7 +22,13 @@ const BabieGiftPage = () => {
         <Turtle
           {...turtleParams.generateTurtleParams(postId)}
           key={postId}
-          captioned={false}
+          isPost
+        />
+      )}
+      {sweetTexts.map(text =>
+        <Turtle
+          {...turtleParams.generateTurtleParams(text)}
+          key={text}
         />
       )}
     </Styled.OceanBackground>

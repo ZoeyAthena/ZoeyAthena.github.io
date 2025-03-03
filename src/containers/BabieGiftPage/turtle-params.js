@@ -120,7 +120,8 @@ export const generateTurtleParams = key => {
   const animDuration = Math.random() * 8 + 2;
   const oscPeriod = animDuration / animCycles;
   const delayCycles = randInt(5);
-  const turtleImg = turtles[(isReversed ? 'left' : 'right') + randIntRange(1, 4)];
+  const whichTurtleImg = (isReversed ? 'left' : 'right') + randIntRange(1, 4);
+  const turtleImg = turtles[whichTurtleImg];
 
   return {
     animationParams: {
@@ -138,11 +139,12 @@ export const generateTurtleParams = key => {
     },
     turtleImg,
     postId: key,
+    text: key,
     textBoxParams: {
-      boxWidth: 20,
-      boxHeight: 15,
-      xOffset: 8,
-      yOffset: -12,
+      boxWidth: 10,
+      boxHeight: 8,
+      xOffset: 0,
+      yOffset: -7,
     },
   };
 };

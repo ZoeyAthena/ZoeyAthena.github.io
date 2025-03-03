@@ -119,9 +119,9 @@ export const TextBox = styled.svg`
 export const Text = styled.p`
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: 10px;
   padding: 0px;
   margin: 0px;
-  width: ${R.prop('boxWidth')}vw;
+  width: calc(${R.prop('boxWidth')}vw - 20px);
   height: ${R.prop('boxHeight')}vw;
 `;
