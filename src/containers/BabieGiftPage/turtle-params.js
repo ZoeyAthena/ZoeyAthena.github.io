@@ -100,7 +100,7 @@ export const turtle4 = {
   },
 };
 
-export const generateTurtleParams = key => {
+export const generateTurtleParams = (key, isPost) => {
   const widthVW = randIntRange(8, 15);
   const maxY = 100 - 2 * widthVW; // x2 accounts for different aspect ratios
   const yOffset = randInt(maxY);
@@ -122,6 +122,12 @@ export const generateTurtleParams = key => {
   const delayCycles = randInt(5);
   const whichTurtleImg = (isReversed ? 'left' : 'right') + randIntRange(1, 4);
   const turtleImg = turtles[whichTurtleImg];
+  const textBoxParams = {
+    boxWidth: 10,
+    boxHeight: 8,
+    xOffset: isPost ? widthVW : 0,
+    yOffset: isPost ? -15 : -7,
+  };
 
   return {
     animationParams: {
@@ -140,11 +146,6 @@ export const generateTurtleParams = key => {
     turtleImg,
     postId: key,
     text: key,
-    textBoxParams: {
-      boxWidth: 10,
-      boxHeight: 8,
-      xOffset: 0,
-      yOffset: -7,
-    },
+    textBoxParams,
   };
 };

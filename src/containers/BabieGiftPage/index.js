@@ -15,19 +15,19 @@ const BabieGiftPage = () => {
   return (
     <Styled.OceanBackground>
       <Styled.OceanHeader>
-        <h1 className="page-title">I love you so much!!!</h1>
+        <h1 className="page-title">Happy birthday!!! I love you so much!!!</h1>
       </Styled.OceanHeader>
       <NavBar />
       {turtlePosts.map(([postId]) =>
         <Turtle
-          {...turtleParams.generateTurtleParams(postId)}
+          {...turtleParams.generateTurtleParams(postId, true)}
           key={postId}
           isPost
         />
       )}
       {sweetTexts.map(text =>
         <Turtle
-          {...turtleParams.generateTurtleParams(text)}
+          {...turtleParams.generateTurtleParams(text, false)}
           key={text}
         />
       )}
