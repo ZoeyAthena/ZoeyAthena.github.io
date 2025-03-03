@@ -43,7 +43,7 @@ const Turtle = ({ animationParams, turtleImg, postId, textBoxParams, isPost, tex
             {turtleMovingState.state ? null : (
               <Styled.TextBoxWrapper {...textBoxParams}>
                 {isPost
-                  ? <InstaPost postId={postId} captioned={false} />
+                  ? <InstaPost postId={postId} />
                   : <React.Fragment>
                       <Styled.TextBox {...textBoxParams} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
                         <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="plum" stroke="purple" />

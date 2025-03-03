@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import * as R from 'ramda';
 
-import underwater from '../../assets/underwater.PNG';
+import underwater from '../../assets/underwater2.PNG';
 
 const calcAnimDuration = props => (props.oscPeriod * 2 * (props.animCycles + props.delayCycles));
 
@@ -19,7 +19,7 @@ export const OceanHeader = styled.header`
 
 export const OceanBackground = styled.div`
   min-width: 100vw;
-  min-height: 200vh;
+  min-height: 180vh;
   height: 100%;
   background-image: url(${underwater});
   background-size: cover;
