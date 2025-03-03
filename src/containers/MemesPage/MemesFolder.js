@@ -3,15 +3,14 @@ import * as R from 'ramda';
 
 import useCounter from '../../hooks/useCounter';
 import useDragFolder from './useDragFolder';
-import InstaPost from './InstaPost';
+import InstaPost from '../../components/InstaPost';
 import DraggyBoi from './DraggyBoi';
 
 import * as Styled from './styles';
 
 const MemesFolder = ({ memeIds, counter }) => {
- const folderDragHook = useDragFolder(counter, -1);
-
-   const [memeResetters, setMemeResetters] = useState([]);
+  const folderDragHook = useDragFolder(counter, -1);
+  const [memeResetters, setMemeResetters] = useState([]);
   const appendMeme = R.pipe(R.append, setMemeResetters);
   const resetMemes = () => { memeResetters.forEach(reset => { reset(folderDragHook.z); }); };
 

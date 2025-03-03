@@ -23,7 +23,7 @@ const useFinalHeight = callback => {
         constantCounterRef.current = 0;
       }
       if (changesCounterRef.current >= 2 && constantCounterRef.current >= 69) {
-        callback(nodeRef.current.offsetHeight); // Do whatever with the final height
+        callback(nodeRef.current.offsetHeight, nodeRef); // Do whatever with the final height
         clearInterval(heightChecker);
       }
     }, 10);

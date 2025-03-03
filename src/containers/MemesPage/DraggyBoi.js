@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import useBooleanState from '../../hooks/useBooleanState';
 import useDrag from './useDrag';
-import useFinalHeight from './useFinalHeight';
+import useFinalHeight from '../../hooks/useFinalHeight';
 
 import * as Styled from './styles';
 

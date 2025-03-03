@@ -1,0 +1,39 @@
+import React from 'react';
+
+import sweetPosts from '../../constants/sweet-insta-posts';
+import sweetTexts from '../../constants/sweet-texts';
+import NavBar from '../../components/NavBar';
+import Turtle from './turtle';
+import * as turtleParams from './turtle-params';
+
+import * as Styled from './styles';
+
+const turtlePosts = sweetPosts.filter(
+  ([postId, whichSlides]) => (whichSlides === null || whichSlides === 'all'));
+
+const BabieGiftPage = () => {
+  return (
+    <Styled.OceanBackground>
+      <Styled.OceanHeader>
+        <h1 className="page-title">Happy birthday!!! I love you so much!!!</h1>
+      </Styled.OceanHeader>
+      <NavBar />
+      {turtlePosts.map(([postId]) =>
+        <Turtle
+          {...turtleParams.generateTurtleParams(postId, true)}
+          key={postId}
+          isPost
+        />
+      )}
+      {sweetTexts.map(text =>
+        <Turtle
+          {...turtleParams.generateTurtleParams(text, false)}
+          key={text}
+        />
+      )}
+      <Turtle {...turtleParams.secretCinnamoroll()} key="easteregg" />
+    </Styled.OceanBackground>
+  )
+};
+
+export default BabieGiftPage;

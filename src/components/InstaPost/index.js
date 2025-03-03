@@ -1,7 +1,7 @@
 import React, { useEffect, memo } from 'react';
 import * as R from 'ramda';
 
-import { fixedScript } from './utils';
+import fixedScript from './fixedScript';
 
 const InstaPost = ({ postId, captioned }) => {
   useEffect(() => {
