@@ -136,7 +136,7 @@ export const generateTurtleParams = key => {
       delayCycles,
     },
     turtleImg: rightOutTurtle,
-    facts: `procedurally generated turtle #${key}, fuck yeah!`,
+    postId: key,
     textBoxParams: {
       boxWidth: 20,
       boxHeight: 15,

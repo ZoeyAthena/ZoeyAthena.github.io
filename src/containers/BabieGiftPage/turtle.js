@@ -3,18 +3,13 @@ import PropTypes from 'prop-types';
 import * as R from 'ramda';
 
 import useBooleanState from '../../hooks/useBooleanState';
-import useFinalHeight from '../../hooks/useFinalHeight';
 import InstaPost from '../../components/InstaPost';
 
 import * as Styled from './styles';
 
-const Turtle = ({ animationParams, turtleImg, facts, textBoxParams }) => {
+const Turtle = ({ animationParams, turtleImg, postId, textBoxParams }) => {
   const turtleRef = useRef(null);
   const turtleMovingState = useBooleanState(true);
-  const afterLoaded = (finalHeight, ref) => {
-    console.log(ref.current);
-  };
-  const { postRef } = useFinalHeight(afterLoaded);
 
   useEffect(() => {
     // Check that all four turtle-animating divs exist
@@ -46,8 +41,8 @@ const Turtle = ({ animationParams, turtleImg, facts, textBoxParams }) => {
               onClick={turtleMovingState.toggle}
             />
             {turtleMovingState.state ? null : (
-              <Styled.TextBoxWrapper {...textBoxParams} ref={postRef}>
-                <InstaPost postId="DEq3A8wxg_P" />
+              <Styled.TextBoxWrapper {...textBoxParams}>
+                <InstaPost postId={postId} />
                 {/* <Styled.TextBox {...textBoxParams} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
                   <polygon points="0,65 0,0 100,0 100,65 40,65 30,80 20,65" fill="plum" stroke="purple" />
                 </Styled.TextBox>
