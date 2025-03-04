@@ -10,6 +10,7 @@ const sweetTexts = [
   'I hope your birthday is one shell of a time!!',
   '*turtle noises*',
   'Redeem code \'50KISSES\' to receive 50 kisses!',
+  'Did you know? You\'re the cutest lil cinnamoroll ever :3',
 ];
 
 sweetTexts[0] = `Fun fact: there are ${sweetPosts.filter(

@@ -1,4 +1,8 @@
 const sweetPosts = [
+  ['DGkQteDpoqj', null],
+  ['DGAyBm-Pu-u', null],
+  ['DFaheX8uT6u', null],
+  ['DGoh8pUSxq9', 'all'],
   ['DGjwfOctwQ_', null],
   ['DGlKa6usL9E', null],
   ['DGZIqJ-S565', null],
